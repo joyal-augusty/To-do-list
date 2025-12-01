@@ -110,3 +110,115 @@ ul li span{
 ul li span:hover{
     background: #edeef0;
 }
+
+
+/* MEDIA QUERIES */
+
+.row{
+    display: flex;
+    align-items: center;
+    background: #edeef0;
+    border-radius: 30px;
+    padding: 5px 10px;   
+    margin-bottom: 20px;
+    gap: 10px;          
+    flex-wrap: wrap;     
+}
+
+.row input{
+    flex: 1;                
+    min-width: 0;            
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px 15px;
+    font-size: 14px;
+    border-radius: 30px;   
+}
+
+.row button{
+    flex: none;               
+    padding: 12px 25px;
+    background: #45ff80;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    white-space: nowrap;      
+}
+
+
+/* Mobile devices (<600px) */
+@media (max-width: 599px){
+    .row{
+        flex-direction: column; 
+        align-items: stretch;  
+    }
+
+    .row input, .row button{
+        width: 100%;   
+    }
+
+    .row button{
+        margin-top: 10px;    
+    }
+}
+
+
+/* Tablets (600px to 1024px) */
+@media (min-width: 600px) and (max-width: 1024px){
+    .to-do-box{
+        padding: 35px 25px 60px;
+    }
+    
+    .to-do-box h2{
+        font-size: 24px;
+    }
+    
+    button{
+        padding: 14px 35px;
+        font-size: 15px;
+    }
+
+    ul li{
+        font-size: 17px;
+        padding-left: 50px;
+    }
+
+    ul li span{
+        width: 38px;
+        height: 38px;
+        font-size: 21px;
+        line-height: 38px;
+    }
+}
+
+/* Desktops / Laptops (1025px and above) */
+@media (min-width: 1025px){
+    .to-do-box{
+        padding: 40px 30px 70px;
+    }
+
+    .to-do-box h2{
+        font-size: 26px;
+    }
+
+    button{
+        padding: 16px 50px;
+        font-size: 16px;
+    }
+
+    ul li{
+        font-size: 17px;
+        padding-left: 50px;
+    }
+
+    ul li span{
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        line-height: 40px;
+    }
+}
